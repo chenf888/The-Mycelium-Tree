@@ -53,7 +53,7 @@ addLayer("n", {
         { key: "n", description: "N: Snare for traps", onPress() { if (canReset(this.layer)) doReset(this.layer) } },
     ],
 
-    passiveGeneration() { return hasMilestone("pa", 0) },
+    passiveGeneration() { if (hasMilestone("pa", 0)) return 1 },
     autoPrestige() { return hasMilestone("q", 5) },
     autoUpgrade() { return hasMilestone("q", 6) },
 
@@ -194,7 +194,7 @@ addLayer("c", {
         { key: "c", description: "C: Seize for controlled hosts", onPress() { if (canReset(this.layer)) doReset(this.layer) } },
     ],
 
-    passiveGeneration() { return hasMilestone("pd", 0) },
+    passiveGeneration() { if (hasMilestone("pd", 0)) return 1 },
     autoPrestige() { return hasMilestone("q", 5) },
     autoUpgrade() { return hasMilestone("q", 6) },
 
@@ -333,7 +333,7 @@ addLayer("pa", {
         { key: "j", description: "J: Cultivate for tended gardens", onPress() { if (canReset(this.layer)) doReset(this.layer) } },
     ],
 
-    passiveGeneration() { return hasMilestone("pr", 0) },
+    passiveGeneration() { if (hasMilestone("pr", 0)) return 1 },
     autoPrestige() { return hasMilestone("q", 5) },
     autoUpgrade() { return hasMilestone("q", 6) },
 
@@ -453,7 +453,7 @@ addLayer("pd", {
         { key: "k", description: "K: Synthesize for antibiotic yield", onPress() { if (canReset(this.layer)) doReset(this.layer) } },
     ],
 
-    passiveGeneration() { return hasMilestone("pr", 1) },
+    passiveGeneration() { if (hasMilestone("pr", 1)) return 1 },
     autoPrestige() { return hasMilestone("q", 5) },
     autoUpgrade() { return hasMilestone("q", 6) },
 
@@ -598,7 +598,7 @@ addLayer("q", {
         { key: "q", description: "Q: Awaken for thoughts", onPress() { if (canReset(this.layer)) doReset(this.layer) } },
     ],
 
-    passiveGeneration() { return hasMilestone("pr", 2) },
+    passiveGeneration() { if (hasMilestone("pr", 2)) return 1 },
     autoPrestige() { return hasMilestone("x", 1) },
     autoUpgrade() { return hasMilestone("x", 1) },
 

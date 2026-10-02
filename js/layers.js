@@ -104,7 +104,7 @@ addLayer("h", {
         }
     },
 
-    passiveGeneration() { return hasMilestone("e", 0) || hasAchievement("a", 34) },
+    passiveGeneration() { if (hasMilestone("e", 0) || hasAchievement("a", 34)) return 1 },
     autoPrestige() { return hasMilestone("s", 1) || hasAchievement("a", 42) },
     autoUpgrade() { return hasMilestone("y", 2) || hasAchievement("a", 45) },
 
@@ -266,7 +266,7 @@ addLayer("m", {
     ],
 
     resetsNothing() { return hasMilestone("m", 2) },
-    passiveGeneration() { return hasMilestone("f", 0) },
+    passiveGeneration() { if (hasMilestone("f", 0)) return 1 },
     autoPrestige() { return hasMilestone("f", 6) },
     autoUpgrade() { return hasMilestone("f", 7) },
 
@@ -402,7 +402,7 @@ addLayer("e", {
         { key: "e", description: "E: Secrete for enzymes", onPress() { if (canReset(this.layer)) doReset(this.layer) } },
     ],
 
-    passiveGeneration() { return hasMilestone("s", 0) },
+    passiveGeneration() { if (hasMilestone("s", 0)) return 1 },
     autoPrestige() { return hasMilestone("f", 6) },
     autoUpgrade() { return hasMilestone("f", 7) },
 
@@ -527,7 +527,7 @@ addLayer("s", {
         { key: "s", description: "S: Colonize for substrate layers", onPress() { if (canReset(this.layer)) doReset(this.layer) } },
     ],
 
-    passiveGeneration() { return hasMilestone("g", 0) },
+    passiveGeneration() { if (hasMilestone("g", 0)) return 1 },
     autoPrestige() { return hasMilestone("r", 3) },
     autoUpgrade() { return hasMilestone("r", 4) },
 
@@ -666,7 +666,7 @@ addLayer("y", {
         { key: "y", description: "Y: Ferment for yeast cultures", onPress() { if (canReset(this.layer)) doReset(this.layer) } },
     ],
 
-    passiveGeneration() { return hasMilestone("b", 0) },
+    passiveGeneration() { if (hasMilestone("b", 0)) return 1 },
     autoPrestige() { return hasMilestone("r", 3) },
     autoUpgrade() { return hasMilestone("r", 4) },
 

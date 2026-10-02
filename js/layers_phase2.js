@@ -62,7 +62,7 @@ addLayer("f", {
         { key: "f", description: "F: Fruit for fruiting bodies", onPress() { if (canReset(this.layer)) doReset(this.layer) } },
     ],
 
-    passiveGeneration() { return hasMilestone("g", 1) },
+    passiveGeneration() { if (hasMilestone("g", 1)) return 1 },
     autoPrestige() { return hasMilestone("r", 3) },
     autoUpgrade() { return hasMilestone("r", 4) },
 
@@ -252,7 +252,7 @@ addLayer("w", {
         { key: "w", description: "W: Balance for climate", onPress() { if (canReset(this.layer)) doReset(this.layer) } },
     ],
 
-    passiveGeneration() { return hasMilestone("i", 0) },
+    passiveGeneration() { if (hasMilestone("i", 0)) return 1 },
     autoPrestige() { return hasMilestone("d", 4) },
     autoUpgrade() { return hasMilestone("d", 5) },
 
@@ -368,7 +368,7 @@ addLayer("g", {
         { key: "g", description: "G: Unfold for gill area", onPress() { if (canReset(this.layer)) doReset(this.layer) } },
     ],
 
-    passiveGeneration() { return hasMilestone("r", 0) },
+    passiveGeneration() { if (hasMilestone("r", 0)) return 1 },
     autoPrestige() { return hasMilestone("d", 4) },
     autoUpgrade() { return hasMilestone("d", 5) },
 
@@ -499,7 +499,7 @@ addLayer("b", {
         { key: "b", description: "B: Glow for luminescence", onPress() { if (canReset(this.layer)) doReset(this.layer) } },
     ],
 
-    passiveGeneration() { return hasMilestone("r", 2) },
+    passiveGeneration() { if (hasMilestone("r", 2)) return 1 },
     autoPrestige() { return hasMilestone("d", 4) },
     autoUpgrade() { return hasMilestone("d", 5) },
 
@@ -635,7 +635,7 @@ addLayer("i", {
         { key: "i", description: "I: Recruit for insect allies", onPress() { if (canReset(this.layer)) doReset(this.layer) } },
     ],
 
-    passiveGeneration() { return hasMilestone("r", 5) },
+    passiveGeneration() { if (hasMilestone("r", 5)) return 1 },
     autoPrestige() { return hasMilestone("d", 4) },
     autoUpgrade() { return hasMilestone("d", 5) },
 

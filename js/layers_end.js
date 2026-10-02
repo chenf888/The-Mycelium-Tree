@@ -52,7 +52,7 @@ addLayer("pr", {
         { key: "u", description: "U: Remember for ancient giants", onPress() { if (canReset(this.layer)) doReset(this.layer) } },
     ],
 
-    passiveGeneration() { return hasMilestone("x", 0) },
+    passiveGeneration() { if (hasMilestone("x", 0)) return 1 },
     autoPrestige() { return hasMilestone("x", 5) },
     autoUpgrade() { return hasMilestone("x", 5) },
 

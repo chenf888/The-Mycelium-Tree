@@ -193,7 +193,7 @@ addLayer("d", {
         { key: "d", description: "D: Ride for gut-passed spores", onPress() { if (canReset(this.layer)) doReset(this.layer) } },
     ],
 
-    passiveGeneration() { return hasMilestone("t", 5) },
+    passiveGeneration() { if (hasMilestone("t", 5)) return 1 },
     autoPrestige() { return hasMilestone("t", 3) },
     autoUpgrade() { return hasMilestone("t", 4) },
 
@@ -315,7 +315,7 @@ addLayer("o", {
     ],
 
     resetsNothing() { return hasMilestone("t", 6) },
-    passiveGeneration() { return hasMilestone("t", 0) },
+    passiveGeneration() { if (hasMilestone("t", 0)) return 1 },
     autoPrestige() { return hasMilestone("t", 6) },
     autoUpgrade() { return hasMilestone("t", 6) },
 
@@ -433,7 +433,7 @@ addLayer("p", {
     ],
 
     resetsNothing() { return hasMilestone("t", 6) },
-    passiveGeneration() { return hasMilestone("t", 1) },
+    passiveGeneration() { if (hasMilestone("t", 1)) return 1 },
     autoPrestige() { return hasMilestone("t", 6) },
     autoUpgrade() { return hasMilestone("t", 6) },
 
@@ -551,7 +551,7 @@ addLayer("l", {
     ],
 
     resetsNothing() { return hasMilestone("t", 6) },
-    passiveGeneration() { return hasMilestone("t", 2) },
+    passiveGeneration() { if (hasMilestone("t", 2)) return 1 },
     autoPrestige() { return hasMilestone("t", 6) },
     autoUpgrade() { return hasMilestone("t", 6) },
 
@@ -678,7 +678,7 @@ addLayer("t", {
         { key: "t", description: "T: Grow for grove vitality", onPress() { if (canReset(this.layer)) doReset(this.layer) } },
     ],
 
-    passiveGeneration() { return false },
+    passiveGeneration() { return 0 },
     autoPrestige() { return hasMilestone("q", 5) },
     autoUpgrade() { return hasMilestone("q", 6) },
 
